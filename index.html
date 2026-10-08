@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mr. Automotives | Jump Start & Roadside Assistance Bangalore</title>
+
+    <meta name="description" content="Mr. Automotive provides car jump start, roadside assistance and doorstep mechanical services within 10 km of 560030, Bangalore. Call or WhatsApp for assistance.">
+
+    <meta name="keywords" content="car jump start Bangalore, jump start near me, roadside assistance Bangalore, car breakdown assistance, doorstep mechanic Bangalore, car mechanic near me">
+
+    <meta name="author" content="Mr. Automotive">
+
+    <meta name="theme-color" content="#0b0b0b">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0b0b;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10,10,10,0.96);
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav {
+            min-height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #f5b400;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #ddd;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #f5b400;
+        }
+
+        .nav-call {
+            background: #f5b400;
+            color: #000;
+            padding: 11px 17px;
+            border-radius: 7px;
+            font-weight: 800;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.88)),
+                radial-gradient(circle at 75% 30%, #3a2c00 0%, #0b0b0b 48%);
+        }
+
+        .hero-content {
+            max-width: 750px;
+            padding: 80px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            border: 1px solid #f5b400;
+            color: #f5b400;
+            padding: 7px 13px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.03;
+            margin-bottom: 22px;
+        }
+
+        h1 span {
+            color: #f5b400;
+        }
+
+        .hero p {
+            color: #d0d0d0;
+            font-size: 19px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 23px;
+            border-radius: 7px;
+            font-weight: 800;
+            transition: .2s;
+        }
+
+        .btn-primary {
+            background: #f5b400;
+            color: #000;
+        }
+
+        .btn-secondary {
+            border: 1px solid #555;
+            background: #161616;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* SERVICES */
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #aaa;
+        }
+
+        .services {
+            background: #101010;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .service-card {
+            background: #171717;
+            border: 1px solid #282828;
+            border-radius: 12px;
+            padding: 30px 22px;
+            transition: .25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #f5b400;
+        }
+
+        .icon {
+            font-size: 35px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .service-card p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #bbb;
+            margin-bottom: 16px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .check-list li {
+            margin-bottom: 13px;
+            color: #ddd;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #f5b400;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .about-box {
+            background: linear-gradient(145deg, #191919, #0d0d0d);
+            border: 1px solid #292929;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .about-box h3 {
+            color: #f5b400;
+            margin-bottom: 15px;
+        }
+
+        /* SERVICE AREA */
+
+        .area {
+            background: #111;
+            text-align: center;
+        }
+
+        .area-box {
+            max-width: 800px;
+            margin: auto;
+            background: #181818;
+            border: 1px solid #292929;
+            border-radius: 15px;
+            padding: 45px 25px;
+        }
+
+        .area-box h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .area-box p {
+            color: #bbb;
+            margin-bottom: 25px;
+        }
+
+        /* CONTACT */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: #161616;
+            border: 1px solid #292929;
+            border-radius: 13px;
+            padding: 32px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .contact-link {
+            color: #f5b400;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: #f5b400;
+            color: #000;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+        }
+
+        .cta .btn {
+            background: #000;
+            color: #fff;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #050505;
+            border-top: 1px solid #222;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .section-heading h2,
+            .about h2 {
+                font-size: 31px;
+            }
+
+            .cta h2 {
+                font-size: 31px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            MR.<span>AUTOMOTIVES</span>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#area">Service Area</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="nav-call" href="tel:+918553389441">
+            Call Now
+        </a>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🚗 LOCAL ROADSIDE ASSISTANCE • BANGALORE
+            </div>
+
+            <h1>
+                Car Trouble?<br>
+                <span>We Come To You.</span>
+            </h1>
+
+            <p>
+                Reliable jump start, roadside assistance and mechanical
+                services at your doorstep. Serving customers within
+                10 km of 560030, Bangalore.
+            </p>
+
+            <div class="buttons">
+
+                <a class="btn btn-primary"
+                   href="tel:+918553389441">
+                    📞 Call Now
+                </a>
+
+                <a class="btn btn-secondary"
+                   href="https://wa.me/918553389441?text=Hello%20Mr.%20Automotive%2C%20I%20need%20roadside%20assistance."
+                   target="_blank">
+                    💬 WhatsApp Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Our Services</h2>
+
+            <p>
+                Automotives assistance when you need it.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="icon">🔋</div>
+
+                <h3>Jump Start Service</h3>
+
+                <p>
+                    Car battery dead? We provide jump-start
+                    assistance to help get your vehicle running again.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">🚗</div>
+
+                <h3>Roadside Assistance</h3>
+
+                <p>
+                    Get convenient roadside assistance when your
+                    vehicle breaks down or won't start.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">🔧</div>
+
+                <h3>Doorstep Mechanical Work</h3>
+
+                <p>
+                    Mechanical assistance at your location,
+                    helping you avoid the hassle of taking your car
+                    to a workshop.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">🛠️</div>
+
+                <h3>Breakdown Assistance</h3>
+
+                <p>
+                    Vehicle trouble? Contact us for assistance
+                    and we will assess the situation at your location.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div>
+
+                <h2>
+                    Automotives Help,<br>
+                    <span style="color:#f5b400;">
+                        At Your Doorstep.
+                    </span>
+                </h2>
+
+                <p>
+                    At Mr. Automotive, we make car care simple,
+                    convenient and accessible.
+                </p>
+
+                <p>
+                    We provide jump-start services, roadside
+                    assistance and mechanical work at your doorstep,
+                    helping customers deal with unexpected vehicle
+                    problems without unnecessary hassle.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>Doorstep automotive assistance</li>
+
+                    <li>Jump start service</li>
+
+                    <li>Roadside assistance</li>
+
+                    <li>Mechanical support</li>
+
+                    <li>Serving within 10 km of 560030</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>MR. AUTOMOTIVE</h3>
+
+                <h2>
+                    Your Local Automotive Assistance Partner
+                </h2>
+
+                <p>
+                    Whether your car has a dead battery, won't start,
+                    or needs mechanical attention, contact Mr. Automotive
+                    for assistance at your location.
+                </p>
+
+                <a class="btn btn-primary"
+                   href="tel:+918553389441">
+                    Get Assistance
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICE AREA -->
+
+<section class="area" id="area">
+
+    <div class="container">
+
+        <div class="area-box">
+
+            <h2>Our Service Area</h2>
+
+            <p>
+                Mr. Automotive provides roadside assistance,
+                jump-start services and doorstep mechanical support
+                within approximately 10 km of PIN code 560030,
+                Bangalore.
+            </p>
+
+            <a class="btn btn-primary"
+               href="https://www.google.com/maps/search/?api=1&query=560030"
+               target="_blank">
+                📍 View Area
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Need Automotive Assistance?</h2>
+
+            <p>
+                Call or WhatsApp Mr. Automotive.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h3>📞 Call Us</h3>
+
+                <p>
+                    Speak with Mr. Automotive about your
+                    roadside assistance or mechanical requirement.
+                </p>
+
+                <a class="contact-link"
+                   href="tel:+918553389441">
+                    +91 85533 89441
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>💬 WhatsApp</h3>
+
+                <p>
+                    Send us a message with your location
+                    and vehicle problem.
+                </p>
+
+                <a class="contact-link"
+                   href="https://wa.me/918553389441?text=Hello%20Mr.%20Automotive%2C%20I%20need%20assistance."
+                   target="_blank">
+                    Chat on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>Car Trouble? Call Mr. Automotives.</h2>
+
+        <p>
+            Jump Start • Roadside Assistance • Doorstep Mechanical Work
+        </p>
+
+        <a class="btn"
+           href="tel:+918553389441">
+            📞 Call +91 85533 89441
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Mr. Automotive. All rights reserved.
+        </p>
+
+        <p>
+            Jump Start • Roadside Assistance • Doorstep Mechanical Service
+            • Bangalore
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
