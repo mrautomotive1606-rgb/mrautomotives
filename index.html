@@ -1,1232 +1,954 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mr. Automotives | Used Cars, Car Buying & Car Services in Bangalore</title>
+  <title>MR.CARMOTIVE | Car Jump Start & Roadside Assistance Bangalore</title>
 
-<meta name="description" content="Mr. Automotives is a multi-brand used car dealer in Bangalore. Buy and sell used four-wheelers and get jump start, roadside assistance and doorstep mechanical services.">
+  <meta name="description" content="MR.CARMOTIVE provides car jump start, roadside assistance, breakdown support and doorstep mechanical assistance in Bangalore. Daily service from 6 AM to midnight. We also buy and sell multi-brand used cars.">
 
-<meta name="keywords" content="used cars Bangalore, second hand cars Bangalore, buy used cars Bangalore, sell used car Bangalore, multi brand used cars, used four wheelers Bangalore, car dealer Bangalore, jump start Bangalore, roadside assistance Bangalore, doorstep car service">
+  <meta name="keywords" content="car jump start Bangalore, roadside assistance Bangalore, car breakdown assistance Bangalore, battery jump start service, doorstep car mechanic Bangalore, used cars Bangalore, sell my car Bangalore, MR.CARMOTIVE">
 
-<meta name="author" content="Mr. Automotives">
+  <meta name="theme-color" content="#111111">
 
-<meta name="theme-color" content="#0b0b0b">
+  <link rel="canonical" href="https://mrautomotives.co.in/">
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#090909;
-    color:#fff;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.container{
-    width:90%;
-    max-width:1180px;
-    margin:auto;
-}
-
-/* HEADER */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:rgba(8,8,8,.97);
-    border-bottom:1px solid #292929;
-}
-
-.nav{
-    min-height:76px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.logo{
-    font-size:24px;
-    font-weight:900;
-    letter-spacing:1px;
-}
-
-.logo span{
-    color:#f5b400;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
-nav a{
-    color:#ddd;
-    font-size:14px;
-    font-weight:700;
-}
-
-nav a:hover{
-    color:#f5b400;
-}
-
-.nav-call{
-    background:#f5b400;
-    color:#000;
-    padding:11px 18px;
-    border-radius:7px;
-    font-weight:800;
-}
-
-/* HERO */
-
-.hero{
-    min-height:680px;
-    display:flex;
-    align-items:center;
-    background:
-    linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.92)),
-    radial-gradient(circle at 75% 25%,#4a3800 0%,#090909 50%);
-}
-
-.hero-content{
-    max-width:850px;
-    padding:90px 0;
-}
-
-.badge{
-    display:inline-block;
-    border:1px solid #f5b400;
-    color:#f5b400;
-    padding:7px 14px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:800;
-    margin-bottom:22px;
-}
-
-h1{
-    font-size:clamp(43px,7vw,78px);
-    line-height:1.02;
-    margin-bottom:22px;
-}
-
-h1 span{
-    color:#f5b400;
-}
-
-.hero-text{
-    color:#ccc;
-    font-size:19px;
-    max-width:700px;
-    margin-bottom:32px;
-}
-
-.buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:13px;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 23px;
-    border-radius:7px;
-    font-weight:800;
-    transition:.2s;
-}
-
-.btn-primary{
-    background:#f5b400;
-    color:#000;
-}
-
-.btn-secondary{
-    background:#171717;
-    border:1px solid #555;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-/* SECTION */
-
-section{
-    padding:85px 0;
-}
-
-.section-heading{
-    text-align:center;
-    margin-bottom:48px;
-}
-
-.section-heading h2{
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.section-heading p{
-    color:#999;
-}
-
-/* BUSINESS OPTIONS */
-
-.options{
-    background:#101010;
-}
-
-.option-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.option-card{
-    background:#171717;
-    border:1px solid #292929;
-    border-radius:14px;
-    padding:35px 27px;
-    transition:.25s;
-}
-
-.option-card:hover{
-    transform:translateY(-5px);
-    border-color:#f5b400;
-}
-
-.option-icon{
-    font-size:42px;
-    margin-bottom:17px;
-}
-
-.option-card h3{
-    font-size:23px;
-    margin-bottom:10px;
-}
-
-.option-card p{
-    color:#aaa;
-    font-size:15px;
-    margin-bottom:22px;
-}
-
-.option-link{
-    color:#f5b400;
-    font-weight:800;
-}
-
-/* CARS */
-
-.cars{
-    background:#090909;
-}
-
-.car-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.car-card{
-    background:#151515;
-    border:1px solid #292929;
-    border-radius:13px;
-    overflow:hidden;
-}
-
-.car-image{
-    height:210px;
-    background:
-    linear-gradient(135deg,#292929,#101010);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#777;
-    font-size:15px;
-}
-
-.car-info{
-    padding:23px;
-}
-
-.car-info h3{
-    font-size:21px;
-    margin-bottom:8px;
-}
-
-.car-info p{
-    color:#aaa;
-    font-size:14px;
-    margin-bottom:17px;
-}
-
-.car-btn{
-    display:inline-block;
-    background:#f5b400;
-    color:#000;
-    padding:10px 16px;
-    border-radius:6px;
-    font-weight:800;
-    font-size:14px;
-}
-
-/* BUY / SELL */
-
-.buy-sell{
-    background:#111;
-}
-
-.buy-sell-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
-
-.buy-box,
-.sell-box{
-    padding:45px;
-    border-radius:15px;
-}
-
-.buy-box{
-    background:#191919;
-    border:1px solid #333;
-}
-
-.sell-box{
-    background:#f5b400;
-    color:#000;
-}
-
-.buy-box h2,
-.sell-box h2{
-    font-size:35px;
-    margin-bottom:15px;
-}
-
-.buy-box p{
-    color:#aaa;
-    margin-bottom:25px;
-}
-
-.sell-box p{
-    margin-bottom:25px;
-}
-
-.sell-box .btn{
-    background:#000;
-    color:#fff;
-}
-
-/* SERVICES */
-
-.services{
-    background:#0d0d0d;
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.service-card{
-    background:#171717;
-    border:1px solid #292929;
-    border-radius:12px;
-    padding:30px 22px;
-}
-
-.service-icon{
-    font-size:35px;
-    margin-bottom:15px;
-}
-
-.service-card h3{
-    font-size:19px;
-    margin-bottom:10px;
-}
-
-.service-card p{
-    color:#aaa;
-    font-size:14px;
-}
-
-/* ABOUT */
-
-.about{
-    background:#111;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:55px;
-    align-items:center;
-}
-
-.about h2{
-    font-size:40px;
-    margin-bottom:18px;
-}
-
-.about h2 span{
-    color:#f5b400;
-}
-
-.about p{
-    color:#aaa;
-    margin-bottom:15px;
-}
-
-.check-list{
-    list-style:none;
-    margin-top:25px;
-}
-
-.check-list li{
-    margin-bottom:12px;
-}
-
-.check-list li::before{
-    content:"✓";
-    color:#f5b400;
-    font-weight:bold;
-    margin-right:10px;
-}
-
-.about-box{
-    background:#181818;
-    border:1px solid #303030;
-    padding:40px;
-    border-radius:15px;
-}
-
-.about-box h3{
-    color:#f5b400;
-    margin-bottom:15px;
-}
-
-/* SERVICE AREA */
-
-.area{
-    text-align:center;
-    background:#0b0b0b;
-}
-
-.area-box{
-    max-width:850px;
-    margin:auto;
-    background:#171717;
-    border:1px solid #292929;
-    padding:45px 30px;
-    border-radius:15px;
-}
-
-.area-box h2{
-    font-size:38px;
-    margin-bottom:13px;
-}
-
-.area-box p{
-    color:#aaa;
-    margin-bottom:25px;
-}
-
-/* CONTACT */
-
-.contact{
-    background:#101010;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.contact-card{
-    background:#181818;
-    border:1px solid #292929;
-    padding:30px;
-    border-radius:13px;
-}
-
-.contact-card h3{
-    margin-bottom:10px;
-}
-
-.contact-card p{
-    color:#aaa;
-    margin-bottom:18px;
-}
-
-.contact-link{
-    color:#f5b400;
-    font-weight:800;
-}
-
-/* CTA */
-
-.cta{
-    background:#f5b400;
-    color:#000;
-    text-align:center;
-}
-
-.cta h2{
-    font-size:43px;
-    margin-bottom:10px;
-}
-
-.cta p{
-    margin-bottom:24px;
-}
-
-.cta .btn{
-    background:#000;
-    color:#fff;
-}
-
-/* FOOTER */
-
-footer{
-    background:#050505;
-    padding:30px 0;
-    text-align:center;
-    border-top:1px solid #222;
-}
-
-footer p{
-    color:#777;
-    font-size:13px;
-    margin:4px;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-    nav ul{
-        display:none;
+  <style>
+    :root {
+      --red: #d71920;
+      --dark: #111111;
+      --black: #050505;
+      --white: #ffffff;
+      --light: #f5f5f5;
+      --grey: #666666;
     }
 
-    .option-grid,
-    .car-grid{
-        grid-template-columns:1fr 1fr;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    .service-grid{
-        grid-template-columns:1fr 1fr;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
     }
 
-    .about-grid,
-    .buy-sell-grid{
-        grid-template-columns:1fr;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-@media(max-width:600px){
-
-    .hero{
-        min-height:620px;
+    .container {
+      width: 90%;
+      max-width: 1180px;
+      margin: auto;
     }
 
-    .hero-text{
-        font-size:16px;
+    .topbar {
+      background: var(--red);
+      color: white;
+      text-align: center;
+      padding: 10px 15px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: .5px;
     }
 
-    .option-grid,
-    .car-grid,
-    .service-grid{
-        grid-template-columns:1fr;
+    header {
+      background: var(--black);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 3px solid var(--red);
     }
 
-    section{
-        padding:65px 0;
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .section-heading h2,
-    .about h2{
-        font-size:32px;
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      white-space: nowrap;
     }
 
-    .buy-box,
-    .sell-box{
-        padding:30px 23px;
+    .logo span {
+      color: var(--red);
     }
 
-    .cta h2{
-        font-size:32px;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      font-size: 13px;
+      font-weight: bold;
     }
 
-    .buttons{
-        flex-direction:column;
+    nav a:hover {
+      color: #ff4248;
     }
 
-    .btn{
-        text-align:center;
-        width:100%;
+    .nav-call {
+      background: var(--red);
+      padding: 11px 17px;
+      border-radius: 4px;
+      color: white;
     }
-}
 
-</style>
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.70)),
+        url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1800&q=85");
+      background-position: center;
+      background-size: cover;
+      color: white;
+      padding: 110px 0 105px;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      color: #ff444a;
+      font-weight: 800;
+      letter-spacing: 3px;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.08;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #ef292f;
+    }
+
+    .hero p {
+      color: #e5e5e5;
+      font-size: 18px;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 23px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: .2s;
+    }
+
+    .btn-red {
+      background: var(--red);
+      color: white;
+    }
+
+    .btn-red:hover {
+      background: #aa1016;
+    }
+
+    .btn-outline {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: black;
+    }
+
+    .trust-strip {
+      background: var(--red);
+      color: white;
+      padding: 18px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .section-heading h2 span {
+      color: var(--red);
+    }
+
+    .section-heading p {
+      color: var(--grey);
+      max-width: 650px;
+      margin: 12px auto 0;
+    }
+
+    .services {
+      background: var(--light);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-bottom: 4px solid var(--red);
+      padding: 30px;
+      border-radius: 6px;
+      transition: .2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(0,0,0,.08);
+    }
+
+    .service-number {
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .service-card h3 {
+      font-size: 23px;
+      margin: 12px 0;
+    }
+
+    .service-card p {
+      color: var(--grey);
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .text-link {
+      color: var(--red);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .emergency {
+      background: var(--black);
+      color: white;
+      text-align: center;
+    }
+
+    .emergency h2 {
+      font-size: clamp(29px, 5vw, 48px);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .emergency h2 span {
+      color: var(--red);
+    }
+
+    .emergency p {
+      color: #cccccc;
+      margin: 0 auto 25px;
+      max-width: 650px;
+    }
+
+    .hours {
+      display: inline-block;
+      background: #242424;
+      border: 1px solid #444;
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    .hours span {
+      color: #ff4148;
+    }
+
+    .cars {
+      background: white;
+    }
+
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .car-card {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 6px;
+      border-left: 5px solid var(--red);
+    }
+
+    .car-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .car-card p {
+      color: var(--grey);
+      margin-bottom: 18px;
+    }
+
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 38px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .about h2 span {
+      color: var(--red);
+    }
+
+    .about p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .about-panel {
+      background: var(--black);
+      color: white;
+      padding: 38px;
+      border-radius: 7px;
+      border-top: 5px solid var(--red);
+    }
+
+    .about-panel h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .about-panel li {
+      list-style: none;
+      padding: 9px 0;
+      border-bottom: 1px solid #333;
+    }
+
+    .about-panel li::before {
+      content: "✓ ";
+      color: #ff343b;
+      font-weight: bold;
+    }
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .contact-card {
+      background: var(--light);
+      text-align: center;
+      padding: 28px 18px;
+      border-radius: 6px;
+      border-bottom: 3px solid var(--red);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: var(--grey);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .contact-card a {
+      color: var(--red);
+      font-weight: bold;
+    }
+
+    footer {
+      background: var(--black);
+      color: white;
+      padding: 35px 0;
+      text-align: center;
+    }
+
+    footer .logo {
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      color: #aaa;
+      font-size: 13px;
+      margin: 5px 0;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #20b95a;
+      color: white;
+      padding: 14px 19px;
+      border-radius: 50px;
+      font-weight: bold;
+      z-index: 2000;
+      box-shadow: 0 4px 15px rgba(0,0,0,.25);
+    }
+
+    @media (max-width: 800px) {
+      .navbar {
+        padding: 15px 0;
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+      }
+
+      .hero {
+        padding: 80px 0;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .service-grid,
+      .car-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .btn {
+        text-align: center;
+        width: 100%;
+      }
+
+      nav {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+  <div class="topbar">
+    ROADSIDE ASSISTANCE · DAILY 6:00 AM – 12:00 AM · BANGALORE
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a href="#" class="logo">MR.<span>CARMOTIVE</span></a>
+
+      <nav>
+        <a href="#home">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#cars">BUY / SELL CARS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+        <a class="nav-call" href="tel:+918553389441">CALL NOW</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
+  <main>
 
-<div class="container nav">
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
 
-<a href="#" class="logo">
-MR.<span>AUTOMOTIVES</span>
-</a>
+          <div class="eyebrow">
+            YOUR ROAD. OUR PRIORITY.
+          </div>
 
-<nav>
-<ul>
-<li><a href="#cars">Cars</a></li>
-<li><a href="#sell">Sell Your Car</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+          <h1>
+            STRANDED?<br>
+            <span>WE'RE HERE UNTIL MIDNIGHT.</span>
+          </h1>
 
-<a class="nav-call" href="tel:+918553389441">
-Call Now
-</a>
+          <p>
+            Car jump start, roadside assistance, breakdown support
+            and doorstep mechanical work in Bangalore.
+            Get the assistance your vehicle needs.
+          </p>
 
-</div>
+          <div class="buttons">
 
-</header>
+            <a class="btn btn-red" href="tel:+918553389441">
+              CALL FOR ASSISTANCE
+            </a>
 
+            <a class="btn btn-outline"
+               href="https://wa.me/918553389441?text=Hello%20MR.CARMOTIVE%2C%20I%20need%20roadside%20assistance.">
+              WHATSAPP US
+            </a>
 
-<!-- HERO -->
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="hero">
+    <!-- SERVICES HIGHLIGHT -->
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div>CAR JUMP START</div>
+        <div>ROADSIDE ASSISTANCE</div>
+        <div>DOORSTEP MECHANICAL WORK</div>
+      </div>
+    </div>
 
-<div class="container">
+    <!-- SERVICES -->
+    <section class="services" id="services">
 
-<div class="hero-content">
+      <div class="container">
 
-<div class="badge">
-MULTI-BRAND USED CARS • BANGALORE
-</div>
+        <div class="section-heading">
 
-<h1>
-Buy. Sell.<br>
-<span>Service.</span>
-</h1>
+          <div class="eyebrow">
+            HOW CAN WE HELP?
+          </div>
 
-<p class="hero-text">
-Welcome to Mr. Automotives — your destination for
-multi-brand used four-wheelers, vehicle buying and
-convenient automotive services in Bangalore.
-</p>
+          <h2>
+            ROAD TROUBLE? <span>WE'RE HERE.</span>
+          </h2>
 
-<div class="buttons">
+          <p>
+            Practical automotive assistance to help you deal
+            with unexpected vehicle problems.
+          </p>
 
-<a class="btn btn-primary" href="#cars">
-🚘 View Cars
-</a>
+        </div>
 
-<a class="btn btn-secondary" href="#sell">
-💰 Sell Your Car
-</a>
+        <div class="service-grid">
 
-<a class="btn btn-secondary" href="#services">
-🔧 Get Service
-</a>
+          <div class="service-card">
 
-</div>
+            <div class="service-number">01 / JUMP START</div>
 
-</div>
+            <h3>Car Battery Jump Start</h3>
 
-</div>
+            <p>
+              Car not starting because of a weak or discharged battery?
+              Contact us for jump-start assistance at your location.
+            </p>
 
-</section>
+            <a class="text-link"
+               href="https://wa.me/918553389441?text=I%20need%20car%20jump%20start%20assistance.">
+              REQUEST JUMP START →
+            </a>
 
+          </div>
 
-<!-- THREE BUSINESS OPTIONS -->
+          <div class="service-card">
 
-<section class="options">
+            <div class="service-number">02 / ROADSIDE SUPPORT</div>
 
-<div class="container">
+            <h3>Roadside Assistance</h3>
 
-<div class="section-heading">
+            <p>
+              Facing an unexpected breakdown? Contact MR.CARMOTIVE
+              for roadside support and assistance in Bangalore.
+            </p>
 
-<h2>What Can We Help You With?</h2>
+            <a class="text-link"
+               href="https://wa.me/918553389441?text=I%20need%20roadside%20assistance.">
+              GET ROAD SUPPORT →
+            </a>
 
-<p>
-Whether you're buying, selling or maintaining your car,
-Mr. Automotives is here to help.
-</p>
+          </div>
 
-</div>
+          <div class="service-card">
 
-<div class="option-grid">
+            <div class="service-number">03 / MECHANICAL SUPPORT</div>
 
-<div class="option-card">
+            <h3>Doorstep Mechanical Work</h3>
 
-<div class="option-icon">🚘</div>
+            <p>
+              Need mechanical attention without taking your car
+              to a workshop? Ask about our on-site assistance.
+            </p>
 
-<h3>Buy a Used Car</h3>
+            <a class="text-link"
+               href="https://wa.me/918553389441?text=I%20need%20doorstep%20mechanical%20assistance.">
+              REQUEST MECHANICAL HELP →
+            </a>
 
-<p>
-Explore our multi-brand selection of used four-wheelers
-and find a vehicle that suits your needs and budget.
-</p>
+          </div>
 
-<a class="option-link" href="#cars">
-Explore Cars →
-</a>
+          <div class="service-card">
 
-</div>
+            <div class="service-number">04 / BREAKDOWN SUPPORT</div>
 
+            <h3>Car Breakdown Assistance</h3>
 
-<div class="option-card">
+            <p>
+              Experiencing vehicle trouble on the road?
+              Contact us and share your location and vehicle issue.
+            </p>
 
-<div class="option-icon">💰</div>
+            <a class="text-link"
+               href="https://wa.me/918553389441?text=My%20car%20has%20broken%20down.%20I%20need%20assistance.">
+              GET BREAKDOWN HELP →
+            </a>
 
-<h3>Sell Your Car</h3>
+          </div>
 
-<p>
-Looking to sell your vehicle? Get in touch with
-Mr. Automotives to discuss selling your car.
-</p>
+        </div>
+      </div>
+    </section>
 
-<a class="option-link" href="#sell">
-Sell Your Car →
-</a>
+    <!-- EMERGENCY CALL TO ACTION -->
+    <section class="emergency">
 
-</div>
+      <div class="container">
 
+        <div class="eyebrow">
+          NEED VEHICLE ASSISTANCE?
+        </div>
 
-<div class="option-card">
+        <h2>
+          CAR TROUBLE?<br>
+          <span>CALL US. WE'RE HERE.</span>
+        </h2>
 
-<div class="option-icon">🔧</div>
+        <p>
+          Contact MR.CARMOTIVE. Tell us your location,
+          vehicle model and the issue you're facing.
+        </p>
 
-<h3>Automotive Services</h3>
+        <div class="hours">
+          OPERATING HOURS:
+          <span>DAILY 6:00 AM – 12:00 AM</span>
+        </div>
 
-<p>
-Need help with your vehicle? We provide jump start,
-roadside assistance and doorstep mechanical work.
-</p>
+        <div class="buttons" style="justify-content:center;">
 
-<a class="option-link" href="#services">
-View Services →
-</a>
+          <a class="btn btn-red" href="tel:+918553389441">
+            CALL +91 85533 89441
+          </a>
 
-</div>
+          <a class="btn btn-outline"
+             href="https://wa.me/918553389441">
+            CHAT ON WHATSAPP
+          </a>
 
-</div>
+        </div>
 
-</div>
+      </div>
+    </section>
 
-</section>
+    <!-- BUY AND SELL CARS -->
+    <section class="cars" id="cars">
 
+      <div class="container">
 
-<!-- USED CARS -->
+        <div class="section-heading">
 
-<section class="cars" id="cars">
+          <div class="eyebrow">
+            OUR AUTOMOTIVE SERVICES
+          </div>
 
-<div class="container">
+          <h2>
+            LOOKING FOR A <span>CAR?</span>
+          </h2>
 
-<div class="section-heading">
+          <p>
+            Beyond roadside assistance, MR.CARMOTIVE also
+            helps customers buy and sell multi-brand used cars.
+          </p>
 
-<h2>Featured Used Cars</h2>
+        </div>
 
-<p>
-Multi-brand used four-wheelers available from Mr. Automotives.
-</p>
+        <div class="car-grid">
 
-</div>
+          <div class="car-card">
 
+            <h3>Buy a Used Car</h3>
 
-<div class="car-grid">
+            <p>
+              Explore multi-brand pre-owned cars.
+              Contact us with your preferred model and budget.
+            </p>
 
+            <a class="btn btn-red"
+               href="https://wa.me/918553389441?text=Hello%2C%20I%20am%20looking%20to%20buy%20a%20used%20car.">
+              ENQUIRE ABOUT CARS
+            </a>
 
-<!-- CAR 1 -->
+          </div>
 
-<div class="car-card">
+          <div class="car-card">
 
-<div class="car-image">
-Car Photo
-</div>
+            <h3>Sell Your Car</h3>
 
-<div class="car-info">
+            <p>
+              Planning to sell your four-wheeler?
+              Share your car details and photographs with us.
+            </p>
 
-<h3>Hyundai i20</h3>
+            <a class="btn btn-red"
+               href="https://wa.me/918553389441?text=Hello%2C%20I%20want%20to%20sell%20my%20car.">
+              SELL YOUR CAR
+            </a>
 
-<p>
-Used Four-Wheeler • Contact for details
-</p>
+          </div>
 
-<a class="car-btn"
-href="https://wa.me/918553389441?text=Hello%20Mr.%20Automotives%2C%20I%20am%20interested%20in%20the%20Hyundai%20i20."
-target="_blank">
-WhatsApp Enquiry
-</a>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <!-- ABOUT -->
+    <section class="about" id="about">
 
-</div>
+      <div class="container about-grid">
 
+        <div>
 
-<!-- CAR 2 -->
+          <div class="eyebrow">
+            ABOUT MR.CARMOTIVE
+          </div>
 
-<div class="car-card">
+          <h2>
+            AUTOMOTIVE SUPPORT.<br>
+            <span>WHEN YOU NEED IT.</span>
+          </h2>
 
-<div class="car-image">
-Add Your Car Photo
-</div>
+          <p>
+            MR.CARMOTIVE is an automotive business based in
+            Bangalore, focused primarily on car jump-start services,
+            roadside assistance, breakdown support and doorstep
+            mechanical work.
+          </p>
 
-<div class="car-info">
+          <p>
+            We also deal in multi-brand used cars, helping customers
+            buy and sell four-wheelers.
+          </p>
 
-<h3>Vehicle Coming Soon</h3>
+          <p>
+            Our aim is to make automotive assistance more convenient
+            and help customers get the support they need.
+          </p>
 
-<p>
-More multi-brand used cars will be listed here.
-</p>
+        </div>
 
-<a class="car-btn" href="tel:+918553389441">
-Call for Cars
-</a>
+        <div class="about-panel">
 
-</div>
+          <h3>WHY MR.CARMOTIVE?</h3>
 
-</div>
+          <ul>
+            <li>Car jump-start assistance</li>
+            <li>Roadside and breakdown support</li>
+            <li>Doorstep mechanical assistance</li>
+            <li>Multi-brand used-car buying and selling</li>
+            <li>Convenient phone and WhatsApp enquiries</li>
+            <li>Daily service until midnight</li>
+          </ul>
 
+        </div>
 
-<!-- CAR 3 -->
+      </div>
+    </section>
 
-<div class="car-card">
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
 
-<div class="car-image">
-Add Your Car Photo
-</div>
+      <div class="container">
 
-<div class="car-info">
+        <div class="section-heading">
 
-<h3>Vehicle Coming Soon</h3>
+          <div class="eyebrow">
+            GET IN TOUCH
+          </div>
 
-<p>
-Contact us for current used car inventory.
-</p>
+          <h2>
+            CONTACT <span>MR.CARMOTIVE</span>
+          </h2>
 
-<a class="car-btn" href="tel:+918553389441">
-Call Mr. Automotives
-</a>
+          <p>
+            Tell us what your vehicle needs.
+            We're ready to hear from you.
+          </p>
 
-</div>
+        </div>
 
-</div>
+        <div class="contact-grid">
 
+          <div class="contact-card">
 
-</div>
+            <h3>CALL US</h3>
 
-</div>
+            <p>Speak to us about your vehicle issue.</p>
 
-</section>
+            <a href="tel:+918553389441">
+              +91 85533 89441
+            </a>
 
+          </div>
 
-<!-- BUY / SELL -->
+          <div class="contact-card">
 
-<section class="buy-sell" id="sell">
+            <h3>WHATSAPP</h3>
 
-<div class="container">
+            <p>Send your location and vehicle details.</p>
 
-<div class="buy-sell-grid">
+            <a href="https://wa.me/918553389441">
+              MESSAGE US
+            </a>
 
+          </div>
 
-<div class="buy-box">
+          <div class="contact-card">
 
-<h2>Looking for a Used Car?</h2>
+            <h3>OUR SERVICE AREA</h3>
 
-<p>
-We deal in multi-brand used four-wheelers.
-Tell us what you're looking for and contact
-Mr. Automotives for our current inventory.
-</p>
+            <p>Bangalore, Karnataka</p>
 
-<a class="btn btn-primary"
-href="https://wa.me/918553389441?text=Hello%20Mr.%20Automotives%2C%20I%20am%20looking%20to%20buy%20a%20used%20car."
-target="_blank">
-Find My Car
-</a>
+            <p>Approximately 10 km around PIN 560030.</p>
 
-</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=MR.CARMOTIVE+Bangalore">
+              FIND US ON MAPS
+            </a>
 
+          </div>
 
-<div class="sell-box">
+        </div>
 
-<h2>Want to Sell Your Car?</h2>
+        <div style="text-align:center; margin-top:30px;">
+          <strong>OPERATING HOURS:</strong>
+          Daily, 6:00 AM – 12:00 AM (Midnight)
+        </div>
 
-<p>
-Looking to sell your four-wheeler?
-Contact Mr. Automotives and tell us about your vehicle.
-</p>
+      </div>
+    </section>
 
-<a class="btn"
-href="https://wa.me/918553389441?text=Hello%20Mr.%20Automotives%2C%20I%20want%20to%20sell%20my%20car."
-target="_blank">
-Sell My Car
-</a>
+  </main>
 
-</div>
+  <!-- FOOTER -->
+  <footer>
 
+    <div class="container">
 
-</div>
+      <div class="logo">
+        MR.<span>CARMOTIVE</span>
+      </div>
 
-</div>
+      <p>
+        JUMP START · ROADSIDE ASSISTANCE · AUTOMOTIVE SERVICES
+      </p>
 
-</section>
+      <p>
+        BUY CARS · SELL CARS
+      </p>
 
+      <p>
+        Serving Bangalore, Karnataka.
+      </p>
 
-<!-- SERVICES -->
+      <p>
+        Daily Operating Hours: 6:00 AM – 12:00 AM
+      </p>
 
-<section class="services" id="services">
+      <p>
+        © <span id="year"></span> MR.CARMOTIVE.
+        All Rights Reserved.
+      </p>
 
-<div class="container">
+    </div>
 
-<div class="section-heading">
+  </footer>
 
-<h2>Automotive Services</h2>
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a class="whatsapp-float"
+     href="https://wa.me/918553389441?text=Hello%20MR.CARMOTIVE%2C%20I%20need%20vehicle%20assistance."
+     aria-label="Contact MR.CARMOTIVE on WhatsApp">
 
-<p>
-Professional automotive assistance at your doorstep.
-</p>
+    WhatsApp
 
-</div>
+  </a>
 
-
-<div class="service-grid">
-
-
-<div class="service-card">
-
-<div class="service-icon">🔋</div>
-
-<h3>Jump Start Service</h3>
-
-<p>
-Car battery dead? Contact us for jump-start assistance
-to help get your vehicle running again.
-</p>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">🚗</div>
-
-<h3>Roadside Assistance</h3>
-
-<p>
-Get assistance when your vehicle breaks down or
-you experience unexpected car trouble.
-</p>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">🔧</div>
-
-<h3>Doorstep Mechanical Work</h3>
-
-<p>
-Mechanical assistance at your location, helping
-you avoid an unnecessary trip to a workshop.
-</p>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">🛠️</div>
-
-<h3>Breakdown Assistance</h3>
-
-<p>
-Vehicle won't start? Contact Mr. Automotives
-for assistance at your location.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<div class="container">
-
-<div class="about-grid">
-
-
-<div>
-
-<h2>
-About <span>Mr. Automotives</span>
-</h2>
-
-<p>
-Mr. Automotives is a Bangalore-based automotive
-business focused on used four-wheelers and
-convenient vehicle services.
-</p>
-
-<p>
-We deal in multi-brand used cars and also purchase
-vehicles from customers looking to sell their cars.
-Alongside our vehicle business, we provide automotive
-assistance at your doorstep.
-</p>
-
-<ul class="check-list">
-
-<li>Multi-brand used four-wheelers</li>
-
-<li>Buy and sell used vehicles</li>
-
-<li>Jump start assistance</li>
-
-<li>Roadside assistance</li>
-
-<li>Doorstep mechanical work</li>
-
-<li>Local Bangalore automotive support</li>
-
-</ul>
-
-</div>
-
-
-<div class="about-box">
-
-<h3>MR. AUTOMOTIVES</h3>
-
-<h2>
-More Than Just Used Cars.
-</h2>
-
-<p>
-From helping you find your next vehicle to helping
-you when your current vehicle needs assistance,
-we're here for your automotive needs.
-</p>
-
-<br>
-
-<a class="btn btn-primary"
-href="tel:+918553389441">
-Call Mr. Automotives
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICE AREA -->
-
-<section class="area">
-
-<div class="container">
-
-<div class="area-box">
-
-<h2>
-Serving Bangalore
-</h2>
-
-<p>
-Our automotive services currently focus on customers
-within approximately 10 km of PIN code 560030.
-For used-car sales and vehicle enquiries, contact us
-for our current availability and location.
-</p>
-
-<a class="btn btn-primary"
-href="https://www.google.com/maps/search/?api=1&query=Mr.%20Automotives%20Bangalore"
-target="_blank">
-📍 Find Us on Google Maps
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="container">
-
-<div class="section-heading">
-
-<h2>Contact Mr. Automotives</h2>
-
-<p>
-Buying, selling or need automotive assistance?
-Get in touch with us.
-</p>
-
-</div>
-
-
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<h3>📞 Call Us</h3>
-
-<p>
-Speak with us about used cars, selling your vehicle
-or automotive services.
-</p>
-
-<a class="contact-link"
-href="tel:+918553389441">
-+91 85533 89441
-</a>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>💬 WhatsApp</h3>
-
-<p>
-Send us your requirement or vehicle details directly
-on WhatsApp.
-</p>
-
-<a class="contact-link"
-href="https://wa.me/918553389441?text=Hello%20Mr.%20Automotives%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
-target="_blank">
-Chat on WhatsApp
-</a>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>📍 Visit Us</h3>
-
-<p>
-Visit our Google-listed Mr. Automotives location
-in Bangalore.
-</p>
-
-<a class="contact-link"
-href="https://www.google.com/maps/search/?api=1&query=Mr.%20Automotives%20Bangalore"
-target="_blank">
-Open Google Maps
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FINAL CTA -->
-
-<section class="cta">
-
-<div class="container">
-
-<h2>
-Your Car. Your Journey. Our Assistance.
-</h2>
-
-<p>
-Buy • Sell • Service with Mr. Automotives
-</p>
-
-<a class="btn"
-href="tel:+918553389441">
-📞 Call +91 85533 89441
-</a>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container">
-
-<p>
-© 2026 Mr. Automotives. All Rights Reserved.
-</p>
-
-<p>
-Used Cars • Car Buying • Jump Start • Roadside Assistance
-• Doorstep Mechanical Services • Bangalore
-</p>
-
-</div>
-
-</footer>
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
-```
